@@ -7,14 +7,15 @@ import jakarta.persistence.Id;
 public class User {
 @Id
 @GeneratedValue(strategy=GenerationType.AUTO)
-private Integer user_id;
+    private Integer id;
+    private Integer user_id;
+    private String first_name;
+    private String last_name;
 
-    public User() {
-    }
-
-    public User(String first_name, String last_name) {
+    public User(String first_name, String last_name, Integer user_id) {
         this.first_name = first_name;
         this.last_name = last_name;
+        this.user_id = user_id;
     }
 
     public Integer getUser_id() {
@@ -41,6 +42,11 @@ private Integer user_id;
         this.last_name = last_name;
     }
 
-    private String first_name;
-    private String last_name;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }

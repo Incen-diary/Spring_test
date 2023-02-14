@@ -12,7 +12,7 @@ public class Message {
     private Integer id;
     private String text;
     private String tag;
-
+    private Integer user_id;
     public Message() {
     }
 
@@ -20,6 +20,15 @@ public class Message {
         this.text = text;
         this.tag = tag;
     }
+
+    public Integer getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Integer user_id) {
+        this.user_id = user_id;
+    }
+
     public Integer getId() {
         return id;
     }

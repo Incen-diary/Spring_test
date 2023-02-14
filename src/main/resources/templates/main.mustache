@@ -2,23 +2,20 @@
 <html>
 <body>
 <div>
-    <form action="/logout}" method="post">
-        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
-        <input type="submit" value="Sign Out"/>
-    </form>
-</div>
-    <div>
         <form method="post">
             <input type="text" name="text" placeholder="Write a message"/>
             <input type="text" name="tag" placeholder="Tag">
-            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
             <button type="submit"> Add </button>
         </form>
     </div>
+{{#user_id}}
+<div>
+    <b>{{user_id}}</b>
+</div>
+{{/user_id}}
     <div>Message list</div>
     <form method="post" action="filter">
         <input type="text" name = "filter">
-        <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
         <button type="submit">Find</button>
     </form>
 {{#messages}}
