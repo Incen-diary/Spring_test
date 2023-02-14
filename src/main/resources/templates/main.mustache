@@ -8,11 +8,13 @@
             <button type="submit"> Add </button>
         </form>
     </div>
-{{#user_id}}
+{{#users}}
 <div>
+    <b>{{fist_name}}</b>
+    <b>{{last_name}}</b>
     <b>{{user_id}}</b>
 </div>
-{{/user_id}}
+{{/users}}
     <div>Message list</div>
     <form method="post" action="filter">
         <input type="text" name = "filter">

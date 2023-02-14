@@ -31,10 +31,10 @@ public class MessageController {
     }
      @GetMapping("/main")
         public String main(Map<String, Object> model) {
-        Iterable<Message> messages = messageRepo.findAll();
+       // Iterable<Message> messages = messageRepo.findAll();
         Iterable<User> users = userRepo.findAll();
-        model.put("messages", messages);
-        model.put("users", users);
+        //model.put("messages", messages);
+         model.put("users", users);
         return "main";
      }
     @PostMapping("/main")
